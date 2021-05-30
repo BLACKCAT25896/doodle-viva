@@ -4,12 +4,20 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="5dp"
-    android:layout_marginTop="1dp">
+    android:layout_marginTop="3dp">
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+            android:textSize="14dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -18,11 +26,22 @@
             android:layout_gravity="center"
             android:id="@+id/categoryTitle"/>
         <ImageButton
+            android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_add_24"
-            android:id="@+id/addBtn"/>
+            android:background="@drawable/ic_baseline_add_24"
+            android:id="@+id/categoryAddBtn"/>
+
+    </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/subCatRecycler"/>
+
 
     </LinearLayout>
 
